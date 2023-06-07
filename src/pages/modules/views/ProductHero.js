@@ -3,8 +3,12 @@ import Button from '../components/Button';
 import Typography from '../components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
 import BackgroundImage from "../media/background_image.jpg"
-
+import { useNavigate } from "react-router-dom"
 export default function ProductHero() {
+  const navigate = useNavigate();
+  const handleNavigate = (e) => {
+    navigate(`${e}`);
+  };
   return (
     <ProductHeroLayout
       sxBackground={{
@@ -35,7 +39,7 @@ export default function ProductHero() {
         variant="contained"
         size="large"
         component="a"
-        href="/premium-themes/onepirate/sign-up/"
+        onClick={() => handleNavigate("/biddingList")}
         sx={{ minWidth: 200 }}
       >
         Start bidding

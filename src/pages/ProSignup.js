@@ -15,9 +15,11 @@ import withRoot from './modules/withRoot';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+
+
 function SignUp() {
   const [sent, setSent] = React.useState(false);
-
+  
   const validate = (values) => {
     const errors = required(['firstName', 'lastName', 'email', 'password', 'phoneNo', 'dateOfBirth'], values);
 
@@ -34,7 +36,8 @@ function SignUp() {
   const handleSubmit = () => {
     setSent(true);
   };
-
+  
+  
   return (
     <React.Fragment>
       <AppAppBar />
@@ -55,7 +58,7 @@ function SignUp() {
           validate={validate}
         >
           {({ handleSubmit: handleSubmit2, submitting }) => (
-            <Box component="form" onSubmit={handleSubmit2} noValidate sx={{ mt: 6  }}>
+            <Box component="form" onSubmit={handleSubmit2} noValidate sx={{ mt: 6  , color:"grey"}}>
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <Field
