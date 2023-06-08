@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 import Button from '../components/Button';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 const ProductHeroLayoutRoot = styled('section')(({ theme }) => ({
   color: theme.palette.common.white,
   position: 'relative',
@@ -29,6 +29,12 @@ const Background = styled(Box)({
 });
 
 function ProductHeroLayout(props) {
+  const scrollToCategory = () => {
+    const categoryElement = document.getElementById('category');
+    if (categoryElement) {
+      categoryElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   const { sxBackground, children } = props;
 
   return (
@@ -63,15 +69,32 @@ function ProductHeroLayout(props) {
         />
         <Background sx={sxBackground} />
         <Button
-        color="secondary"
-        variant="contained"
-        size="large"
-        component="a"
-        href="/premium-themes/onepirate/sign-up/"
-        sx={{ minWidth: 200 ,position: 'absolute', bottom: 32}}
-      >
-        categories
-      </Button>
+            color="secondary"
+            variant="contained"
+            size="large"
+            component="a"
+            onClick={scrollToCategory}
+            sx={{
+              minWidth: 200,
+              position: 'absolute',
+              bottom: 32,
+              backgroundColor: 'transparent',
+              border: '2px solid white',
+              '&:hover': {
+                backgroundColor: 'transparent',
+              },
+              '& .MuiButton-label': {
+                display: 'flex',
+                alignItems: 'center',
+              },
+              '& .MuiSvgIcon-root': {
+                marginLeft: 5,
+              },
+            }}
+          >
+            Categories <ArrowDropDownIcon />
+        </Button>
+
         <Box
         />
       </Container>
