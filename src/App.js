@@ -5,7 +5,8 @@ import Home from './pages/Home';
 import SignUp from './pages/SignUp';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProSignup from "./pages/Prosignup2"
-import BiddingList from './pages/BiddingList';
+import BidForm from './pages/BidForm';
+
 function App() {
   return (
         <React.Fragment>
@@ -16,7 +17,7 @@ function App() {
               <Route path="/signin" element={<SignIn />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/proSignup2" element={<ProSignup />} />
-              <Route path="/biddingList" element={<BiddingList />} />
+              <Route path="/bidForm" element={<BidForm />} />
             </Routes>
           </Router>
         }

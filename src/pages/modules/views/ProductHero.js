@@ -1,10 +1,12 @@
-import * as React from 'react';
+import React from 'react';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
-import BackgroundImage from "../media/background_image.jpg"
+import BackgroundImage from '../media/background_image.jpg';
 import { useNavigate } from "react-router-dom"
+
 export default function ProductHero() {
+
   const navigate = useNavigate();
   const handleNavigate = (e) => {
     navigate(`${e}`);
@@ -20,7 +22,7 @@ export default function ProductHero() {
       {/* Increase the network loading priority of the background image. */}
       <img
         style={{ display: 'none' }}
-        src={{BackgroundImage}}
+        src={BackgroundImage}
         alt="increase priority"
       />
       <Typography color="inherit" align="center" variant="h2" marked="center">
@@ -39,10 +41,10 @@ export default function ProductHero() {
         variant="contained"
         size="large"
         component="a"
-        onClick={() => handleNavigate("/biddingList")}
+        onClick={() => handleNavigate("/bidForm")}
         sx={{ minWidth: 200 }}
       >
-        Start bidding
+        Start Hiring
       </Button>
       <Typography variant="body2" color="inherit" sx={{ mt: 2 }}>
         Discover the experience

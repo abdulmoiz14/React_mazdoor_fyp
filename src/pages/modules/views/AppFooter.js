@@ -5,32 +5,20 @@ import Link from '@mui/material/Link';
 import Container from '@mui/material/Container';
 import Typography from '../components/Typography';
 import TextField from '../components/TextField';
-
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import { IconButton } from '@mui/material';
 function Copyright() {
   return (
     <React.Fragment>
       {'© '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        Bid2Hire
       </Link>{' '}
       {new Date().getFullYear()}
     </React.Fragment>
   );
 }
-
-const iconStyle = {
-  width: 48,
-  height: 48,
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  backgroundColor: 'warning.main',
-  mr: 1,
-  '&:hover': {
-    bgcolor: 'warning.dark',
-  },
-};
-
 const LANGUAGES = [
   {
     code: 'en-US',
@@ -59,18 +47,12 @@ export default function AppFooter() {
               sx={{ height: 120 }}
             >
               <Grid item sx={{ display: 'flex' }}>
-                <Box component="a" href="https://mui.com/" sx={iconStyle}>
-                  <img
-                    src="/static/themes/onepirate/appFooterFacebook.png"
-                    alt="Facebook"
-                  />
-                </Box>
-                <Box component="a" href="https://twitter.com/MUI_hq" sx={iconStyle}>
-                  <img
-                    src="/static/themes/onepirate/appFooterTwitter.png"
-                    alt="Twitter"
-                  />
-                </Box>
+                  <IconButton >
+                    <TwitterIcon fontSize="large" color='blue' />
+                  </IconButton>
+                  <IconButton >
+                    <FacebookIcon fontSize="large" color='blue' />
+                  </IconButton>
               </Grid>
               <Grid item>
                 <Copyright />
@@ -109,27 +91,6 @@ export default function AppFooter() {
                 </option>
               ))}
             </TextField>
-          </Grid>
-          <Grid item>
-            <Typography variant="caption">
-              {'Icons made by '}
-              <Link href="https://www.freepik.com" rel="sponsored" title="Freepik">
-                Freepik
-              </Link>
-              {' from '}
-              <Link href="https://www.flaticon.com" rel="sponsored" title="Flaticon">
-                www.flaticon.com
-              </Link>
-              {' is licensed by '}
-              <Link
-                href="https://creativecommons.org/licenses/by/3.0/"
-                title="Creative Commons BY 3.0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                CC 3.0 BY
-              </Link>
-            </Typography>
           </Grid>
         </Grid>
       </Container>

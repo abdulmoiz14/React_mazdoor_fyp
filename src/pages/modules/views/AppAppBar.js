@@ -14,11 +14,11 @@ function NavbarComponent() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand onClick={() => handleNavigate("/")}>Mazdoori</Navbar.Brand>
+        <Navbar.Brand onClick={() => handleNavigate("/")}>Bid2Hire</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link onClick={() => handleNavigate("/biddingList")}>Hire</Nav.Link>
+            <Nav.Link onClick={() => handleNavigate("/bidForm")}>Hire</Nav.Link>
             <NavDropdown title="Services" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Cleaner</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
